@@ -1,3 +1,9 @@
+# What is this?
+
+This is a very simple working example that incorporates useReducer, useContext and fetching data from an API.
+This is probably not an ideal solution but it works and there are no eslint errors about missing dependencies and no infinte loops.
+There is a notes.js file that includes some code from various forums and links to articles/blogs/discussions about useCallback, useReducer, useContext and React rendering behavior.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
