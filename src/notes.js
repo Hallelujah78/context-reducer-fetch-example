@@ -6,6 +6,10 @@
 // https://kentcdodds.com/blog/usememo-and-usecallback
 // Almost complete guide to React rendering behavior: https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#memoize-everything
 // Easy article on dependency arrays and what to put in them: https://devtrium.com/posts/dependency-arrays
+// context, state, useReducer: https://dev.to/clickpesa/react-manage-state-using-context-api-with-usestate-or-usereducer-hooks-d5l
+// practical usage of reducer and context: https://dev.to/jackent2b/the-best-couple-usecontext-usereducer-4e65
+
+// extremely useful thread with helpful answers about persisting state using local storage and how this is a normal scenario: https://stackoverflow.com/questions/73179071/react-persist-data-on-page-refresh-useeffect-usecontext-usestate
 
 // Note: I'm not sure it's even posible to use a useFetch custom hook with context the way I've been trying.
 // You can't call a custom hook inside a useEffect. Ideally you would define such a hook in its own file and then import it into your provider and run it inside a useEffect, but this does not seem possible.

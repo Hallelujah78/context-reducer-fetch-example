@@ -1,5 +1,3 @@
-import { useReducer } from "react";
-
 const pictureReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {

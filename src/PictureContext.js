@@ -4,28 +4,14 @@ import pictureReducer from "./pictureReducer";
 export const PictureContext = createContext(null);
 export const PictureDispatchContext = createContext(null);
 
-const initialState = { pictures: [], loading: false, error: false };
-
-// no reason pictureReducer shouldn't be defined in own file to facilitate reuse?
-// export const pictureReducer = (state, action) => {
-//   const { type, payload } = action;
-//   switch (type) {
-//     case "SET_PICTURES":
-//       return { ...state, pictures: payload };
-//     case "SET_ERROR":
-//       return { ...state, error: payload };
-//     case "SET_LOADING":
-//       return { ...state, loading: payload };
-
-//     default:
-//       return state;
-//   }
-// };
-
-// this reducer just has a switch statement
-
 export const PictureProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(pictureReducer, initialState);
+  const [state, dispatch] = useReducer(pictureReducer, {
+    pictures: [],
+    loading: true,
+    error: false,
+  });
+
+  const { pictures, loading, error } = state;
 
   const setPictures = useCallback((pictures) => {
     dispatch({
@@ -46,14 +32,6 @@ export const PictureProvider = ({ children }) => {
       payload: error,
     });
   }, []);
-
-  // useEffect(() => {
-  //   fetch("https://picsum.photos/v2/list?page=2&limit=3")
-  //     .then((response) => response.json())
-  //     .then((pictures) => {
-  //       setPictures(pictures);
-  //     });
-  // }, []);
 
   const value = { setPictures, setLoading, setError };
 
