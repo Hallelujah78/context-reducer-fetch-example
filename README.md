@@ -1,8 +1,19 @@
 # What is this?
 
-This is a very simple working example that incorporates useReducer, useContext and fetching data from an API.
-This is probably not an ideal solution but it works and there are no eslint errors about missing dependencies and no infinte loops.
+This is a very simple working example that incorporates react-router-dom, useReducer, useContext and fetching data from an API. It uses a SharedLayout component and outlet from react-router-dom.
+
 There is a notes.js file that includes some code from various forums and links to articles/blogs/discussions about useCallback, useReducer, useContext and React rendering behavior.
+
+State is persisted through refreshes using local storage. There are two state variables in the context: pictures and search. Pictures is the JSON response from Lorem Picsum and search is a string that can be toggled from 'Google' to 'Bing'. The purpose of search is simply to show that the state is persistent when the user refreshes. The value of search is displayed in the Navbar component with a button that allows the user to toggle between Google and Bing.
+
+The initial state for pictures is taken from local storage if it exists, or set to an empty array. The initial state for search is taken from local storage or set to 'Google'.
+
+This can be reused by:
+
+1. changing all occurrences of picture to products or whatever you require
+2. removing search and associated reducer function
+3. strip out the inline CSS
+4. clean out context and search content from Navbar.js
 
 # Getting Started with Create React App
 
